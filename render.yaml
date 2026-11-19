@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: pak-point-whatsapp-bot
+    runtime: node
+    plan: free
+    buildCommand: pip install -r requirements.txt && npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
