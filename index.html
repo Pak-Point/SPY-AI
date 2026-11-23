@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ur">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d1b"><meta name="description" content="SPY AI - Turn your images into AI videos">
+<title>SPY AI — Image to Video</title><link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="logo">SPY<span>AI</span></div><span class="tag">IMAGE TO VIDEO</span></header>
+<main>
+<section class="hero"><p class="eyebrow">YOUR CREATIVE AI STUDIO</p><h1>تصویر کو ویڈیو میں بدلیں</h1><p class="sub">اپنی تصویر اپ لوڈ کریں، Prompt لکھیں اور AI ویڈیو بنائیں۔</p></section>
+<section class="panel">
+<label class="label" for="imageInput">1. اپنی تصویر منتخب کریں</label>
+<label class="upload" for="imageInput" id="dropZone"><span class="uploadIcon">＋</span><strong>تصویر اپ لوڈ کریں</strong><small>JPG، PNG یا WEBP — زیادہ سے زیادہ 10MB</small><img id="preview" alt="Image preview" hidden></label>
+<input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+<label class="label" for="prompt">2. ویڈیو کے لیے Prompt لکھیں</label>
+<textarea id="prompt" rows="4" placeholder="مثال: کیمرہ آہستہ آہستہ زوم کرے، درختوں کے پتے ہوا میں ہلیں، قدرتی اور حقیقت پسندانہ منظر..."></textarea>
+<div class="settings"><div><label class="label" for="duration">3. دورانیہ</label><select id="duration"><option value="5">5 سیکنڈ</option><option value="8" selected>8 سیکنڈ</option><option value="10">10 سیکنڈ</option><option value="12">12 سیکنڈ</option><option value="15">15 سیکنڈ</option></select></div><div><label class="label" for="resolution">4. ویڈیو کوالٹی</label><select id="resolution"><option value="480p">480p</option><option value="720p" selected>720p</option><option value="1080p">1080p</option></select></div></div>
+<button id="generateBtn" class="primary">✦ ویڈیو بنائیں</button>
+<p class="hint">ویڈیو بنانے کے لیے انٹرنیٹ اور API سروس درکار ہے۔ API کی قیمت لاگو ہو سکتی ہے۔</p>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<div id="result" class="result" hidden><h2>آپ کی ویڈیو تیار ہے!</h2><video id="video" controls playsinline></video><a id="download" class="download" download="spy-ai-video.mp4">ویڈیو محفوظ کریں</a></div>
+</section>
+<footer>© 2026 SPY AI · Made for creators</footer>
+</main><script src="app.js"></script>
+</body></html>
