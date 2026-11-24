@@ -1,15 +1,33 @@
 <!doctype html>
 <html lang="ur" dir="rtl">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#101426"><title>SPY AI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101426">
+  <title>SPY AI</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
-    <header><div class="mark">✦</div><div><h1>SPY AI</h1><p>تصویر سے AI ویڈیو بنائیں</p></div><span class="pill">BETA</span></header>
+    <header>
+      <div class="mark">✦</div>
+      <div><h1>SPY AI</h1><p>AI تصویر اور ویڈیو اسٹوڈیو</p></div>
+      <span class="pill">BETA</span>
+    </header>
+
     <section class="panel">
+      <div class="feature-heading"><span>🍌</span><div><h2>Image Generator</h2><p>Nano Banana 2.1 · Prompt سے تصویر بنائیں</p></div></div>
+      <label class="section-title" for="imagePrompt">تصویر کا Prompt لکھیں</label>
+      <textarea id="imagePrompt" maxlength="2000" placeholder="مثال: A beautiful cinematic landscape at sunset, ultra realistic, detailed..."></textarea>
+      <button id="generateImage" type="button">🍌 تصویر بنائیں</button>
+      <div id="imageStatus" class="status" role="status" aria-live="polite"></div>
+      <img id="imageResult" class="image-result" alt="AI سے بنائی گئی تصویر" hidden>
+      <a id="imageDownload" class="download" hidden download="spy-ai-image.png">تصویر ڈاؤن لوڈ کریں</a>
+
+      <hr>
+
+      <div class="feature-heading"><span>🎬</span><div><h2>Image to Video</h2><p>اپنی تصویر سے AI ویڈیو بنائیں</p></div></div>
       <label class="section-title" for="imageInput">1۔ اپنی تصویر منتخب کریں</label>
       <label class="upload" for="imageInput"><span class="upload-icon">＋</span><strong id="uploadText">تصویر اپلوڈ کریں</strong><small>JPG، PNG یا WEBP — زیادہ سے زیادہ 10 MB</small></label>
       <input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
@@ -22,8 +40,8 @@
         <div><label for="ratio">ویڈیو سائز</label><select id="ratio"><option value="9:16">موبائل 9:16</option><option value="16:9">وائیڈ 16:9</option><option value="1:1">اسکوائر 1:1</option></select></div>
         <div><label for="resolution">کوالٹی</label><select id="resolution"><option value="720p">720p</option><option value="480p">480p</option><option value="1080p">1080p</option></select></div>
       </div>
-      <button id="generate">✦ ویڈیو بنائیں</button>
-      <p class="notice">ویڈیو جنریشن کے لیے فعال API اور کریڈٹ درکار ہیں۔ ہر جنریشن کی قیمت منتخب ماڈل اور دورانیے کے مطابق ہو سکتی ہے۔</p>
+      <button id="generate" type="button">✦ ویڈیو بنائیں</button>
+      <p class="notice">ویڈیو جنریشن کے لیے الگ فعال Video API اور کریڈٹ درکار ہیں۔</p>
       <div id="status" role="status" aria-live="polite"></div>
       <video id="result" controls playsinline hidden></video>
       <a id="download" class="download" hidden download="spy-ai-video.mp4">ویڈیو ڈاؤن لوڈ کریں</a>
@@ -31,4 +49,5 @@
     <footer>© SPY AI · آپ کی تصویر، آپ کا تخلیقی خیال</footer>
   </main>
   <script src="app.js"></script>
-</body></html>
+</body>
+</html>
