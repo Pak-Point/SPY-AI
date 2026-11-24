@@ -1,4 +1,4 @@
-const API_BASE = (localStorage.getItem("SPY_AI_API_BASE") || "").replace(/\/$/, "");
+const API_BASE = "https://spy-ai-video-api.nk7741595.workers.dev";
 const imageInput=document.querySelector("#imageInput"),preview=document.querySelector("#preview"),uploadText=document.querySelector("#uploadText"),promptBox=document.querySelector("#prompt"),generate=document.querySelector("#generate"),statusBox=document.querySelector("#status"),video=document.querySelector("#result"),download=document.querySelector("#download");
 const imagePrompt=document.querySelector("#imagePrompt"),generateImage=document.querySelector("#generateImage"),imageStatus=document.querySelector("#imageStatus"),imageResult=document.querySelector("#imageResult"),imageDownload=document.querySelector("#imageDownload");
 let imageData="";
